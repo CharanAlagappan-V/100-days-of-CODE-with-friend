@@ -1,0 +1,23 @@
+import java.util.*;
+public class maxsubstring {
+	public static String MaxSubString(String[] names) {
+		String res = names[0];
+		for(int i=1;i<res.length();i++) {
+			while(names[i].indexOf(res)!=0)
+				res = res.substring(0,res.length()-1);
+		}
+		return res;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		String[] names = new String[n];
+		for(int i=0;i<n;i++)
+			names[i]=sc.next();
+		String res = MaxSubString(names);
+		System.out.println(res);
+	}
+
+}
