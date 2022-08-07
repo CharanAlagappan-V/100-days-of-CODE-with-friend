@@ -1,0 +1,24 @@
+public class SumOfDigitsInSentence {
+
+	public static void main(String[] args) {
+		String input = "4hat bag tug41";
+		String[] array = input.split(" ");
+		for(int i=0;i<array.length;i++) {
+			int index = array[i].indexOf("t");
+			int sum=0;
+			if(index!=-1) {
+				for(int j=0;j<array[i].length();j++) {
+					char ch = array[i].charAt(j);
+					if(Character.isDigit(ch)) {
+						sum+=ch-48;
+					}
+				}
+				System.out.println(array[i]+"-->"+sum);
+			}
+			if(sum==0)
+				System.out.println(array[i]+"--> None");
+		}
+
+	}
+
+}
