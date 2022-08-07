@@ -1,0 +1,21 @@
+
+public class CamelCaseToSnakeCase {
+
+	public static void main(String[] args) {
+		String input = "ComputerHope";
+		int len = input.length();
+		String output = input.charAt(0)+"";
+		for(int i=1;i<len;i++) {
+			if(Character.isUpperCase(input.charAt(i))) {
+				output = output+"_"+input.charAt(i);
+			}
+			else {
+				output = output+input.charAt(i);
+			}
+		}
+		System.out.println("camel case: "+input);
+		System.out.println("snake case : "+output.toLowerCase());
+
+	}
+
+}
