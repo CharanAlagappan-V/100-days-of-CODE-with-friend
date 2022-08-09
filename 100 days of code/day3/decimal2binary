@@ -1,0 +1,18 @@
+import java.util.*;
+public class decimal2binary {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int decimal = sc.nextInt();
+		String res = "";
+		int rem=0;
+		while(decimal>0) {
+			rem = decimal%2;
+			res = res+rem;
+			decimal = decimal/2;
+		}
+		System.out.println(res);
+
+	}
+
+}
