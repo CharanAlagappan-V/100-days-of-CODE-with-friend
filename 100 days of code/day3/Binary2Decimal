@@ -1,0 +1,27 @@
+import java.util.*;
+public class BinaryToDecimal {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String binaryvalue = sc.next();
+		
+		int basevalue = 2;
+		int pos = 0;
+		int powervalue = 1;
+		int decnum = 0;
+		int i = binaryvalue.length()-1;
+		while(i>=0) {
+			if(binaryvalue.charAt(i)=='1') {
+				for(int j=0;j<pos;j++) {
+					powervalue *= basevalue;
+			}
+			decnum += powervalue;
+			powervalue = 1;
+		}
+		i--;
+		pos++;
+	}
+		System.out.println(decnum);
+  }
+
+}
